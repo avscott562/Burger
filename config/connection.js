@@ -20,3 +20,4 @@ var connection = mysql.createConnection({
 
 
 // Export the connection.
+module.exports = connection;
