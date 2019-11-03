@@ -11,10 +11,8 @@
         {{burger_name}}
 
         <button class="change-eat" data-id="{{id}}" data-eaten="{{devoured}}">
-            {{#if !devoured}}Eat Me!{{else}}All Gone!{{/if}}
+            {{#if devoured}}Devour It!{{/if}}
         </button>
-
-        <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
     </li>
     {{/unless}}
   {{/each}}
@@ -27,12 +25,6 @@
     {{#if devoured}}
       <li>
         {{burger_name}}
-
-        <button class="change-eat" data-id="{{id}}" data-eaten="{{devoured}}">
-            {{#if !devoured}}Eat Me!{{else}}All Gone!{{/if}}
-        </button>
-
-        <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
     </li>
     {{/if}}
   {{/each}}
@@ -46,12 +38,7 @@
     <input type="text" id="bn" name="name">
   </div>
 
-  <div class="form-group">
-    <label for="eaten">Eaten?</label><br>
-    <input type="radio" name="eaten" value="1" checked> Yummm!<br>
-    <input type="radio" name="eaten" value="0"> Eat Me
-  </div>
-
+ 
   {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
   <button type="submit">Add Burger</button>
 
