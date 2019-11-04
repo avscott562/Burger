@@ -16,7 +16,7 @@ id INTEGER AUTO_INCREMENT NOT NULL,
 burger_name VARCHAR(25) NOT NULL,
 
 -- devoured: a boolean.
-devoured BOOLEAN,
+devoured BOOLEAN DEFAULT false,
 
 PRIMARY KEY(id)
 
