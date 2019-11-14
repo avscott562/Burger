@@ -7,6 +7,8 @@ const path = require("path");
 let app = express();
 let PORT = process.env.PORT || 8080;
 
+// console.log(__dirname)
+
 app.use(express.static(__dirname + "/public"));
 
 // Sets up the Express app to handle data parsing

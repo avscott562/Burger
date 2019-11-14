@@ -1,6 +1,6 @@
 {{!-- Setup the index.handlebars to have the template that Handlebars can render onto. --}}
 <div class="container">
-  <h1 class="text-center mb-5" >All Da Burgers!</h1>
+  <h1 class="text-center mb-5 title" >All Da Burgers!</h1>
   <br>
   <div class="row">
     <div class="col-4 notEaten">
@@ -14,14 +14,14 @@
               {{!-- <button id="change-eat" class="btn btn-sm btn-secondary" data-id="{{id}}" data-eaten="{{devoured}}">
                 
               </button> --}}
-              <a href="/api/burgers/:{{id}}" class="btn btn-sm btn-secondary">Devour It!</a>
+              <button class="btn btn-sm btn-secondary devour" data-id="{{id}}">Devour It!</button>
           </li>
           {{/unless}}
         {{/each}}
       </ul>
     </div>
     <div class="col-4">
-      <img src="../public/assets/images/burger-cheese.jpg" alt="juicy cheeseburgers">
+      <img src="/assets/images/burger-cheese.jpg" alt="juicy cheeseburgers" class="middle">
     </div>
     <div class="col-4 eaten">
       <h3>That burger is gone!</h3>
@@ -41,14 +41,15 @@
     <div class="col-3"></div>
     <div class="col-6">
       <h2 class="mb-3 px-5">Add a Burger</h2>
-        <form class="create-form mt-4">
+        <form method="POST" action="/api/burgers" class="create-form mt-4">
 
           <div class="form-group">
             <label for="bn">Burger Name:</label>
             <input type="text" id="bn" name="name">
-            {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
-          <button type="submit" class="btn btn-warning ml-3">Add Burger</button>
           </div>
+
+          {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
+          <button type="submit" class="btn btn-warning ml-3">Add Burger</button>
 
         </form>
     </div>

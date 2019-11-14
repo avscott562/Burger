@@ -1,5 +1,15 @@
 .jumbotron {
     background-image: url("../images/burger-trio.jpg") !important;
-    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 70vh !important;
+    height : 50vh;
 }
 
+.title {
+    font-size: 70px;
+}
+
+.middle {
+    height: 300px;
+    width: 300px;
+}

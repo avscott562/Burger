@@ -75,7 +75,7 @@ let orm = {
     
     // updateOne()
     updateOne: function(table, condition, cb) {
-      var queryString = "UPDATE " + table + " SET devoured = true WHERE id = " + condition + ";";
+      var queryString = "UPDATE " + table + " SET devoured = true WHERE " + condition + ";";
   
       console.log(queryString);
       connection.query(queryString, function(err, result) {
